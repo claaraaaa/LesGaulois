@@ -29,5 +29,4 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
-
 }

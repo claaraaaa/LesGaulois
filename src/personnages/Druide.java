@@ -10,7 +10,7 @@ public class Druide {
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour je suis le druide " + nom + " et ma potion peut aller d'une force " + 
-		effetPotionMin + " à " + effetPotionMax "." );
+		effetPotionMin + " à " + effetPotionMax + ".");
 	}
 	
 	public String getNom() {
@@ -24,6 +24,4 @@ public class Druide {
 	private String prendreParole() {
 		return "Le druide" + nom + " : ";
 	}
-	
-	
 }
