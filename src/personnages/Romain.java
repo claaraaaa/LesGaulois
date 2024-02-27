@@ -1,4 +1,5 @@
 package personnages;
+import personnages.Gaulois;
 
 public class Romain {
 	private String nom;
@@ -18,7 +19,7 @@ public class Romain {
 	}
 
 	private String prendreParole() {
-		return "Le romain" + nom + " : ";
+		return "Le romain " + nom + " : ";
 	}
 	
 	public void recevoirCoup(int forceCoup) {
@@ -28,5 +29,14 @@ public class Romain {
 		} else {
 			parler("J'abandonne...");
 		}
+	}
+	
+	@Override
+	public String toString() {
+		return "Romain [nom=" + nom + ", force=" + force + "]";
+	}
+	
+	public static void main(String[] args) {
+		
 	}
 }
