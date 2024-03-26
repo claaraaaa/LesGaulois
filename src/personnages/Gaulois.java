@@ -49,6 +49,18 @@ public class Gaulois {
 		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée");
 	}
 	
+	public void faireUneDonnation(Musee musee) {
+		if (trophees != null && nbTrophees > 0) {
+			String texte="Je donne au musee tous mes trophees :\n";
+			for (int i = 0; i < trophees.length; i++) {
+				musee.donnerTrophee(this, trophees[i]);
+				texte += trophees[i] + "\n";
+			}
+			parler(texte);
+			trophees = null;
+		}
+	} 
+	
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";

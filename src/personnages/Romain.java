@@ -50,16 +50,19 @@ public class Romain {
 		// pré-condition
 		assert force > 0;
 		int oldForce = force;
+		
 		forceCoup = calculResistanceEquipement(forceCoup);
+		
 		force -= forceCoup;
-		if (force == 0) {
+		if (force > 0) {
 			parler("Aïe");
 		} else {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
 		}
-		// post condition la force a diminuée
-		assert force < oldForce;
+		if (force == oldForce) {
+			parler("Haha mon équipement était supérieur à ta force !");
+		}
 		return equipementEjecte;
 	}
 
@@ -89,7 +92,7 @@ public class Romain {
 
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
-		System.out.println("L'équipement de " + nom + "s'envole sous la force du coup.");
+		System.out.println("L'équipement de " + nom + " s'envole sous la force du coup.");
 		
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {
